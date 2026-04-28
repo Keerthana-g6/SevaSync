@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SevaSync - AI Decision Intelligence System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>SevaSync: AI Decision Intelligence</h1>
+    <p class="subtitle">
+      An AI-powered decision intelligence system that predicts, prioritizes, and optimizes NGO crisis response in real time.
+    </p>
+
+    <section class="card">
+      <h2>1) Live Impact Metrics</h2>
+      <div id="metricsOutput" class="output metrics-panel">Run allocation to generate real-time metrics.</div>
+    </section>
+
+    <section class="card">
+      <h2>2) Ingest Field Data</h2>
+      <label for="reportsInput">Real-time Community Reports</label>
+      <textarea id="reportsInput" rows="6" placeholder="Ward 4: 17 families need clean drinking water urgently."></textarea>
+      
+      <label for="volunteersInput" style="margin-top: 12px;">Active Volunteer Fleet (JSON)</label>
+      <textarea id="volunteersInput" rows="6" spellcheck="false"></textarea>
+      <button id="loadSampleBtn" class="secondary">Load Sample Chaos Scenario</button>
+    </section>
+
+    <section class="card highlight-card">
+      <h2>3) Prioritize & Optimize</h2>
+      <button id="runBtn">Run AI Decision Engine</button>
+      <p id="status" class="status">System Ready.</p>
+    </section>
+
+    <section class="card">
+      <h2>4) Predictive Crisis Forecasting</h2>
+      <p class="hint">Detect hidden correlations and forecast demand spikes in the next 6 hours.</p>
+      <button id="predictBtn" class="secondary">Predict Emerging Crises</button>
+      <div id="predictionOutput" class="output">Awaiting prediction trigger...</div>
+    </section>
+
+    <section class="card">
+      <h2>5) Ranked Needs (The Prioritization Engine)</h2>
+      <div id="needsOutput" class="output">Awaiting data...</div>
+    </section>
+
+    <section class="card">
+      <h2>6) Optimized Volunteer Assignments</h2>
+      <div id="assignmentsOutput" class="output">Awaiting data...</div>
+    </section>
+
+    <section class="card">
+      <h2>7) Trust & Transparency Layer (Explainable AI)</h2>
+      <label>Decision Rationale</label>
+      <div id="rationaleOutput" class="output">Awaiting data...</div>
+      <label style="margin-top: 12px;">Fairness & Coverage Alerts</label>
+      <div id="fairnessOutput" class="output">Awaiting data...</div>
+    </section>
+
+    <section class="card">
+      <h2>8) What-If Scenario Simulation</h2>
+      <label for="scenarioInput">Crisis Escalation Prompt</label>
+      <textarea id="scenarioInput" rows="3" placeholder="What if a flash flood cuts off access to Ward 4?"></textarea>
+      <button id="simulateBtn" class="secondary">Run Simulation</button>
+      <div id="whatIfOutput" class="output">Awaiting simulation trigger...</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

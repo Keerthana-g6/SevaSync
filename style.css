@@ -1,0 +1,238 @@
+:root {
+  --primary: #1a73e8;
+  --secondary: #0f766e;
+  --bg: #f8f9fa;
+  --text: #202124;
+  --border: #dadce0;
+  --critical: #b42318;
+  --critical-bg: #fef3f2;
+  --high: #dc6803;
+  --high-bg: #fff7ed;
+  --medium: #175cd3;
+  --medium-bg: #eff8ff;
+  --low: #067647;
+  --low-bg: #ecfdf3;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 { font-weight: 700; letter-spacing: -0.5px; margin-bottom: 5px; }
+.subtitle { color: #5f6368; margin-bottom: 30px; }
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.highlight-card {
+  border-left: 5px solid var(--primary);
+  background: #f1f8ff;
+}
+
+label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; color: #5f6368; }
+
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover { opacity: 0.9; }
+.secondary { background: var(--secondary); margin-top: 10px; }
+
+.output {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #3c4043;
+}
+
+.metrics-panel {
+  background: #f8fafc;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.status { font-weight: bold; color: var(--primary); margin-top: 10px; }
+.hint { margin: 8px 0 0; color: #6b7280; font-size: 0.9rem; }
+
+.metrics-grid,
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.metric-tile,
+.need-card,
+.assignment-card,
+.alert-card,
+.explain-card,
+.timeline-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+  background: #fff;
+}
+
+.metric-tile {
+  margin-top: 0;
+}
+
+.metric-label,
+.mini-label,
+.section-label,
+.timeline-hour {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #667085;
+}
+
+.metric-value {
+  display: block;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.metric-danger {
+  background: var(--critical-bg);
+  border-color: #fecdca;
+  color: var(--critical);
+}
+
+.metric-warn {
+  background: var(--high-bg);
+  border-color: #fed7aa;
+  color: var(--high);
+}
+
+.metric-ok {
+  background: var(--low-bg);
+  border-color: #abefc6;
+  color: var(--low);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.severity-critical {
+  background: var(--critical-bg);
+  border-color: #fecdca;
+  color: var(--critical);
+}
+
+.severity-high {
+  background: var(--high-bg);
+  border-color: #fed7aa;
+  color: var(--high);
+}
+
+.severity-medium {
+  background: var(--medium-bg);
+  border-color: #b2ddff;
+  color: var(--medium);
+}
+
+.severity-low {
+  background: var(--low-bg);
+  border-color: #abefc6;
+  color: var(--low);
+}
+
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.meta-line {
+  margin-top: 6px;
+  color: #475467;
+}
+
+.assignment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.timeline-list,
+.spike-list {
+  margin-top: 8px;
+}
+
+.spike-row {
+  display: grid;
+  grid-template-columns: 84px 1fr 48px;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.spike-bar-wrap {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.spike-bar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+@media (max-width: 720px) {
+  .assignment-grid,
+  .spike-row {
+    grid-template-columns: 1fr;
+  }
+
+  .row-between {
+    flex-direction: column;
+  }
+}

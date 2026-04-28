@@ -1,0 +1,21 @@
+{
+  "name": "sevasync-ai-prototype",
+  "version": "1.0.0",
+  "description": "Google Solution Challenge MVP for AI-powered NGO volunteer allocation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "gemini",
+    "ngo",
+    "volunteer",
+    "solution-challenge"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
